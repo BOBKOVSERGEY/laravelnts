@@ -17,6 +17,8 @@
 
 Route::get('/', 'IndexController@index');
 Route::get('/about', 'IndexController@about');
+Route::get('/testget', 'IndexController@testGet');
+Route::post('/testpost', 'IndexController@testPost');
 
 // rest архитектура
 // определение типа доступа
