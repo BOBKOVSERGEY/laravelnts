@@ -14,3 +14,12 @@
 Route::get('/', function () {
     return view('welcome');
 });
+
+// rest архитектура
+// определение типа доступа
+//Route::get($uri, $callback); запрашиваем инфу
+//Route::post($uri, $callback); добавляем инфу
+//Route::put($uri, $callback);
+//Route::patch($uri, $callback); изменить инфу
+//Route::delete($uri, $callback); удалить инфу
+//Route::options($uri, $callback);
