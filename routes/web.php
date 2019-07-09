@@ -17,8 +17,17 @@
 
 Route::get('/', 'IndexController@index');
 Route::get('/about', 'IndexController@about');
-Route::get('/testget', 'IndexController@testGet');
+Route::get('/testget', 'IndexController@testGet')->name('testget');
+Route::get('/testpost', 'IndexController@testPost');
+Route::get('/news/{id}', 'NewsController@getNews')
+        ->where('id', '[0-9]+');
+//Route::get('/news/{slug}', 'NewsController@getNews')->where('slug', '[a-zA-Z0-9-_]+');
+
 Route::post('/testpost', 'IndexController@testPost');
+
+
+// combine routes
+
 
 // rest архитектура
 // определение типа доступа

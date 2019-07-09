@@ -20,13 +20,18 @@ class IndexController extends Controller
 
     public function testGet(Request $request)
     {
+        if ($request->route()->named('testget')) {
+            echo 'We are here';
+        }
+
         $name = $request->input('name');
         $age = $request->input('age');;
         return view('testget', compact('name', 'age'));
     }
 
-    public function testPost()
+    public function testPost(Request $request)
     {
+        dd($request->all());
         return view('testpost');
     }
 }
