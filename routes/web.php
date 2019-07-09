@@ -11,9 +11,12 @@
 |
 */
 
-Route::get('/', function () {
+/*Route::get('/', function () {
     return view('welcome');
-});
+});*/
+
+Route::get('/', 'IndexController@index');
+Route::get('/about', 'IndexController@about');
 
 // rest архитектура
 // определение типа доступа
